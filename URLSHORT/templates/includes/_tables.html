@@ -1,0 +1,28 @@
+<pre>
+
+
+</pre>
+<table class="table table-sortable">
+    <thread>
+        <tr>
+            {% for l in range(0, header_len) %}
+            <th>{{header[l]}}</th>
+            {% endfor %}
+        </tr>
+
+    </thread>
+    <tbody>
+
+        {% for x in range(0,rows_len) %}
+            <tr>
+                {% for y in range(0, row_len) %}
+                    {% if 'http' in rows[x][y] %}
+                        <td><a href="{{rows[x][y]}}">{{rows[x][y]}}</a></td>
+                    {% else %}
+                        <td>{{rows[x][y]}}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

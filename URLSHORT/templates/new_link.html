@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+
+        <h1>New Link Was Succesfully Created</h1>
+        <pre>
+            
+        </pre>
+        <a href={{ url_for('l',link=link) }}>https://url_short/l/{{link}}</a>
+    </div>
+        
+
+{% endblock %}

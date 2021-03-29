@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        
+        <h1>Mannage Account {{session.username}}</h1>
+        <pre>
+
+        </pre>
+        <table class="table">
+            <tr>
+                <th scope="col">
+                    <a>Email: {{email}}</a>
+                </th>
+                <th scope="col">
+                    <a>Username: {{session.username}}</a>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a class="btn btn-outline-secondary" href="/change_pass" role="button">Change Password</a>
+                </th>
+                <th>
+                    <a class="btn btn-outline-danger" href="/logout" role="button">Logout</a>
+                </th>
+            </tr>
+        </table>
+        
+    </div>
+        
+
+{% endblock %}

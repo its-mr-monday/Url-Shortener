@@ -1,0 +1,86 @@
+<!--   Navbar Handler File For layout.html -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <a class="navbar-brand" href="/">sh-ur.com</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <!-- Home Page Highlighter Handle -->
+          {% if "home" in nav_page %}
+            <li class="nav-item active" id="link-home">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+          {% else %}
+            <li class="nav-item" id="link-home">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+          {% endif %}
+  
+          <!--  If user is logged in display the database and dashboard -->
+          {% if session.logged_in %}
+            <!--  Database Page Highlighter Handle -->
+            {% if "my_urls" in nav_page %}
+            <li class="nav-item dropdown active" id="dropdown-nav">
+              <a class="nav-link dropdown-toggle" href="/dashboard" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Urls
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/create_link">Create Url</a>
+                <a class="dropdown-item" href="/view_links">View Links</a>
+              </div>
+              {% else %}
+              <li class="nav-item dropdown id="dropdown-nav">
+                <a class="nav-link dropdown-toggle" href="/dashboard" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  My Urls
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/create_link">Create Url</a>
+                  <a class="dropdown-item" href="/view_links">View Links</a>
+                </div>
+              </li>
+              {% endif %}
+              <!--  Jinja handler for highlighted dashboard on navbar-->
+  
+          {% endif %}
+        {% if session.logged_in %}
+            
+              <!--  Jinja handler for highlighted dashboard on navbar-->
+            {% if "dashboard" in nav_page %}
+                <li class="nav-item active" id="link-dashboard">
+                  <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+            {% else %}
+                <li class="nav-item" id="link-dashboard">
+                  <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+            {% endif %}
+          {% endif %}
+  
+  
+        </ul>
+        <ul class="navbar-nav ml-auto navbar-right">
+          {% if session.logged_in %}
+            <!-- If user logged in display logout else display register or login -->
+            <li class="navbar-titem active">
+                <a class="btn btn-sm btn-outline-primary" href="/manage_account" role="button">Manage Account</a>
+            </li>
+            <pre>  </pre>
+            <li class="navbar-titem active">
+              <a class="btn btn-sm btn-outline-danger" href="/logout" role="button">Logout</a>
+            </li>
+          {% else %}
+            <li class="navbar-titem active">
+              <a class="btn btn-sm btn-outline-primary" href="/register" role="button">Register</a>
+            </li>
+            <pre>  </pre>
+            <li class="navbar-titem active">
+              <a class="btn btn-sm btn-outline-success" href="/login" role="button">Login</a>
+            </li>
+          {% endif %}
+        </ul>
+  
+      </div>
+    </nav>

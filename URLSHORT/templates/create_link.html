@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+
+        <h1>Create A New Link</h1>
+        <h2><small>All links are disabled after 24 hours</small></h2>
+        <pre>
+
+        
+        </pre>
+        
+        <form method="POST">
+
+            <table class="table">
+                <tr>
+                    
+                    <th scope="col">
+                        <div class="form-row align-items-center">
+                            
+                            <input class="form-control" placeholder="https://www.example.com" id="url_main" name="url_main">
+                        </div>
+                    </th>
+                    
+                    <th scope="col">
+                        <div class="form-row align-items-center">
+                            
+                            <button type="submit" class="btn btn-outline-success" id="submit">Submit</button>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+        
+
+{% endblock %}

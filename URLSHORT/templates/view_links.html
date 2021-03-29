@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Links Created by {{session.username}}</h1>
+        
+        {% if 'true' in table%}
+            {% include 'includes/_tables.html' %}
+        {% else %}
+            <h2>You have not created links yet</h2>
+            <a class="btn btn-outline-primary" href="/create_link" role="button">Create a new Link</a>
+        {% endif %}
+    </div>
+    
+
+{% endblock %}

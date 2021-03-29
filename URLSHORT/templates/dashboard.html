@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+
+        <h1>User Dashboard</h1>
+        <h2><small>Welcome {{session.username}}</small></h2>
+        <p>Check out these links</p>
+        <table class="table">
+            <tr>
+                <th scope="col">
+                    <a class="btn btn-outline-success" href="/" role="button">Home Page</a>
+                </th>
+                <th scope="col">
+                    <a class="btn btn-outline-primary" href="/create_link" role="button">Create Link</a>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a class="btn btn-outline-secondary" href="/view_links" role="button">View Links</a>
+                </th>
+            </tr>
+        </table>
+    </div>
+        
+
+{% endblock %}
