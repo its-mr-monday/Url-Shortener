@@ -1,7 +1,7 @@
 # Url-Shortener
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-![build succeeded](https://img.shields.io/badge/build-succeeded-brightgreen.svg)
+[![build succeeded](https://img.shields.io/badge/build-succeeded-brightgreen.svg)]
 
 Python3 Based Url Shortener Web Application
 
