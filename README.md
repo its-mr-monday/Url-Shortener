@@ -4,11 +4,12 @@ Python3 Based Url Shortener Web Application
 # Required Python Libraries
 
     pip install the following modules:
-    flask
-    flask-wtf
-    wtforms
-    passlib
-    flask-mysqldb
+    
+    - flask
+    - flask-wtf
+    - wtforms
+    - passlib
+    - flask-mysqldb
     
     
 # Note for Usage
