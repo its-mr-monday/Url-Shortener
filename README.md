@@ -1,6 +1,8 @@
 # Url-Shortener
-Python3 Based Url Shortener Web Application
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
+Python3 Based Url Shortener Web Application
+
 
 # Required Python Libraries
 
