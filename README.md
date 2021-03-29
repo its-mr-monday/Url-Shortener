@@ -8,13 +8,13 @@ Python3 Based Url Shortener Web Application
 
 # Required Python Libraries
 
-    pip install the following modules:
+    The following python3 modules are required to run this url-shortener:
     
-    - flask
-    - flask-wtf
-    - wtforms
-    - passlib
-    - flask-mysqldb
+        - flask
+        - flask-wtf
+        - wtforms
+        - passlib
+        - flask-mysqldb
     
     
 # Note for Usage
