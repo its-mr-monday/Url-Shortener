@@ -1,0 +1,18 @@
+Your database tables must have a specific name and table format
+
+  for the "users" table the following rows and its settings must be in place:
+    
+    - idusers "INT" "PRIMARY KEY" "AUTO INCREMENT"
+    - uname "VARCHAR(20)"
+    - upass "VARCHAR(256)"
+    - uemail "VARCHAR(100)"
+    - name "VARCHAR(45)"
+    - register_date "TIMESTAMP" "CURRENT_TIMESTAMP"
+  
+  for the "urltable" table the following rows and its settings must be in place:
+  
+    - url_id "INT" "PRIMARY KEY" "AUTO INCREMENT"
+    - url_shortened "VARCHAR(45)"
+    - url_long "VARCHAR(150)"
+    - url_user "VARCHAR(45)"
+    - url_timecreated "TIMESTAMP" "CURRENT_TIMESTAMP"
